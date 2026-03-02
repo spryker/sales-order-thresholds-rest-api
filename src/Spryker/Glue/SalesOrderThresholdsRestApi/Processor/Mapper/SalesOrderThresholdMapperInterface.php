@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\RestCartsAttributesTransfer;
 
 interface SalesOrderThresholdMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     * @param \Generated\Shared\Transfer\RestCartsAttributesTransfer $restCartsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestCartsAttributesTransfer
-     */
     public function mapQuoteTransferToRestCartsAttributesTransfer(
         QuoteTransfer $quoteTransfer,
         RestCartsAttributesTransfer $restCartsAttributesTransfer

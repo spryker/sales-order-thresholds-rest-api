@@ -28,9 +28,6 @@ use Spryker\Shared\Kernel\Transfer\Exception\NullValueException;
  */
 class SalesOrderThresholdRestCartAttributesMapperPluginTest extends Unit
 {
-    /**
-     * @return void
-     */
     public function testQuoteTransferToRestCartsAttributesMap(): void
     {
         $salesOrderThresholdTypeTransfer = (new SalesOrderThresholdTypeTransfer())
@@ -68,9 +65,6 @@ class SalesOrderThresholdRestCartAttributesMapperPluginTest extends Unit
         $this->assertSame($restCartsThresholdsTransfer->getMessage(), $salesOrderThresholdValueTransfer->getMessage());
     }
 
-    /**
-     * @return void
-     */
     public function testMapQuoteTransferToRestCartAttributesTransferWithoutSalesOrderThresholdType(): void
     {
         $salesOrderThresholdValueTransfer = (new SalesOrderThresholdValueTransfer())

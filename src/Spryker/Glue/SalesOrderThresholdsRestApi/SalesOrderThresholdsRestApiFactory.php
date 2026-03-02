@@ -13,9 +13,6 @@ use Spryker\Glue\SalesOrderThresholdsRestApi\Processor\Mapper\SalesOrderThreshol
 
 class SalesOrderThresholdsRestApiFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\SalesOrderThresholdsRestApi\Processor\Mapper\SalesOrderThresholdMapperInterface
-     */
     public function createSalesOrderThresholdMapper(): SalesOrderThresholdMapperInterface
     {
         return new SalesOrderThresholdMapper();

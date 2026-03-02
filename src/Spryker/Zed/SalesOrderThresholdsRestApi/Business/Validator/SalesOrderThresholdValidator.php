@@ -18,19 +18,11 @@ class SalesOrderThresholdValidator implements SalesOrderThresholdValidatorInterf
      */
     protected $salesOrderThresholdFacade;
 
-    /**
-     * @param \Spryker\Zed\SalesOrderThresholdsRestApi\Dependency\Facade\SalesOrderThresholdsRestApiToSalesOrderThresholdFacadeInterface $salesOrderThresholdFacade
-     */
     public function __construct(SalesOrderThresholdsRestApiToSalesOrderThresholdFacadeInterface $salesOrderThresholdFacade)
     {
         $this->salesOrderThresholdFacade = $salesOrderThresholdFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CheckoutDataTransfer $checkoutDataTransfer
-     *
-     * @return \Generated\Shared\Transfer\CheckoutResponseTransfer
-     */
     public function validateSalesOrderThresholdsCheckoutData(CheckoutDataTransfer $checkoutDataTransfer): CheckoutResponseTransfer
     {
         return $this->salesOrderThresholdFacade->validateSalesOrderThresholdsCheckoutData($checkoutDataTransfer);

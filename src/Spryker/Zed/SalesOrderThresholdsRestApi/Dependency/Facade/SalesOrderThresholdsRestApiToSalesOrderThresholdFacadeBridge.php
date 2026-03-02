@@ -26,21 +26,11 @@ class SalesOrderThresholdsRestApiToSalesOrderThresholdFacadeBridge implements Sa
         $this->salesOrderThresholdFacade = $salesOrderThresholdFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CheckoutDataTransfer $checkoutDataTransfer
-     *
-     * @return \Generated\Shared\Transfer\CheckoutResponseTransfer
-     */
     public function validateSalesOrderThresholdsCheckoutData(CheckoutDataTransfer $checkoutDataTransfer): CheckoutResponseTransfer
     {
         return $this->salesOrderThresholdFacade->validateSalesOrderThresholdsCheckoutData($checkoutDataTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function expandQuoteWithSalesOrderThresholdValues(QuoteTransfer $quoteTransfer): QuoteTransfer
     {
         return $this->salesOrderThresholdFacade->expandQuoteWithSalesOrderThresholdValues($quoteTransfer);

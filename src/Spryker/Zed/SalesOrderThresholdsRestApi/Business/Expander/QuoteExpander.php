@@ -17,19 +17,11 @@ class QuoteExpander implements QuoteExpanderInterface
      */
     protected $salesOrderThresholdFacade;
 
-    /**
-     * @param \Spryker\Zed\SalesOrderThresholdsRestApi\Dependency\Facade\SalesOrderThresholdsRestApiToSalesOrderThresholdFacadeInterface $salesOrderThresholdFacade
-     */
     public function __construct(SalesOrderThresholdsRestApiToSalesOrderThresholdFacadeInterface $salesOrderThresholdFacade)
     {
         $this->salesOrderThresholdFacade = $salesOrderThresholdFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function expandQuoteWithSalesOrderThresholdValues(QuoteTransfer $quoteTransfer): QuoteTransfer
     {
         return $this->salesOrderThresholdFacade->expandQuoteWithSalesOrderThresholdValues($quoteTransfer);

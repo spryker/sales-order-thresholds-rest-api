@@ -20,9 +20,6 @@ use Spryker\Zed\SalesOrderThresholdsRestApi\SalesOrderThresholdsRestApiDependenc
  */
 class SalesOrderThresholdsRestApiBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdsRestApi\Business\Expander\QuoteExpanderInterface
-     */
     public function createQuoteExpander(): QuoteExpanderInterface
     {
         return new QuoteExpander(
@@ -30,9 +27,6 @@ class SalesOrderThresholdsRestApiBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdsRestApi\Business\Validator\SalesOrderThresholdValidatorInterface
-     */
     public function createSalesOrderThresholdValidator(): SalesOrderThresholdValidatorInterface
     {
         return new SalesOrderThresholdValidator(
@@ -40,9 +34,6 @@ class SalesOrderThresholdsRestApiBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdsRestApi\Dependency\Facade\SalesOrderThresholdsRestApiToSalesOrderThresholdFacadeInterface
-     */
     public function getSalesOrderThresholdFacade(): SalesOrderThresholdsRestApiToSalesOrderThresholdFacadeInterface
     {
         return $this->getProvidedDependency(SalesOrderThresholdsRestApiDependencyProvider::FACADE_SALES_ORDER_THRESHOLD);
